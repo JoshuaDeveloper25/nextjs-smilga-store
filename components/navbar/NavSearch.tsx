@@ -6,9 +6,10 @@ import { Input } from "../ui/input";
 
 const NavSearch = () => {
   const searchParams = useSearchParams();
+  const searchParamsValue = searchParams.get("search");
   const { replace } = useRouter();
   const [search, setSearch] = useState(
-    searchParams.get("search")?.toString() || ""
+    searchParamsValue?.toString() || ""
   );
 
   const handleSearch = useDebouncedCallback((value: string) => {
@@ -24,11 +25,10 @@ const NavSearch = () => {
   }, 500);
 
   useEffect(() => {
-    if (!searchParams.get("search")) {
+    if (!searchParamsValue) {
       setSearch("");
     }
-    
-  }, [searchParams.get("search")]);
+  }, [searchParamsValue]);
 
   return (
     <Input

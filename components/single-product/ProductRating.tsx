@@ -5,6 +5,8 @@ type ProductRatingProps = {
 };
 
 const ProductRating = ({ productId }: ProductRatingProps) => {
+  console.log(productId);
+  
   // Temp
   const rating = 4.2;
   const count = 25;
