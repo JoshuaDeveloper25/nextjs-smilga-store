@@ -4,6 +4,7 @@ type NavLink = {
   label: string;
 };
 
+// Exporting links
 export const links: NavLink[] = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
