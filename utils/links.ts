@@ -1,3 +1,4 @@
+// Types of links
 type NavLink = {
   href: string;
   label: string;
